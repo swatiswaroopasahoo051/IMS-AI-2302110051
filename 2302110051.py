@@ -9,6 +9,7 @@ Original file is located at
 
 !pip install cadquery
 
+#PLATE
 from cadquery import func as cf
 
 plate = cf.box(80, 50, 10)          # length, width, height (mm)
@@ -27,6 +28,7 @@ part = plate - hole                            # subtract = drill!
 print(part.isValid(), round(part.Volume(), 1))
 part.exportStl("plate.stl")
 
+#BRICK
 import math
 from cadquery import func as cf
 
@@ -81,6 +83,7 @@ brick.exportStl("brick.stl")
 
 !pip install cadquery
 
+#TRAY
 from dataclasses import dataclass
 from cadquery import func as cf
 
